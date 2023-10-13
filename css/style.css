@@ -1218,3 +1218,18 @@ body {
     padding: 10px 0;
     display: none;
 }
+
+.cs-banner {
+    background-color: var(--footer);
+    text-align: center;
+}
+
+#sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
