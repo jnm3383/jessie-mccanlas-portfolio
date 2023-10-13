@@ -992,8 +992,9 @@ footer .social-media a {
 }
 
 .home-title {
-    font-weight: 200;
-    font-size: 2rem;
+    font-weight: 300;
+    font-size: 3rem;
+    margin-bottom: 0;
 }
 .home-subheader {
     font-weight: 300;
@@ -1062,10 +1063,6 @@ footer .social-media a {
 body {
     margin: 0;
     padding: 0;
-}
-
-.navigation {
-    /* navigation menu styles */
 }
 
 .scroll-to-top {
@@ -1207,7 +1204,17 @@ body {
 
 /* Project Styles */
 
-.roject-img {
+.project-img {
 
     width: 100%;
+}
+
+#sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
 }

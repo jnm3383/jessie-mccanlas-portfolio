@@ -1,3 +1,4 @@
+// Scroll to top arrow
 document.addEventListener('DOMContentLoaded', function () {
     const scrollToTop = document.getElementById('scrollToTop');
 
@@ -17,3 +18,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Sticky Nav for case studies
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const stickyNav = document.querySelector('#sticky-nav');
+    const headerBottom = header.getBoundingClientRect().bottom;
+
+    if (headerBottom <= 0) {
+        stickyNav.style.display = 'block';
+    } else {
+        stickyNav.style.display = 'none';
+    }
+});
+
