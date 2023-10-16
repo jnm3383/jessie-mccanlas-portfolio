@@ -665,7 +665,7 @@ h1, h2, h3 ,h4 ,h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Poppins', sans-serif;
     line-height: var(--base-line-height);
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: var(--base-line-height);
 }
 
