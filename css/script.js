@@ -34,17 +34,30 @@ window.addEventListener('scroll', function() {
 
 // contact form
 
-const contactForm = document.getElementById('contact-form');
-const confirmation = document.getElementById('confirmation');
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const confirmationMessage = document.getElementById('confirmation-message');
 
-contactForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    
-    // You can use an AJAX request here to send form data to a server script
-    // For this example, we'll just display a confirmation message.
-    
-    contactForm.style.display = 'none';
-    confirmation.style.display = 'block';
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        confirmationMessage.innerHTML = ''; // Clear previous messages
+
+        const formData = new FormData(contactForm);
+        const xhr = new XMLHttpRequest();
+
+        xhr.open('POST', 'process.php', true);
+
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                confirmationMessage.textContent = 'Message sent successfully.';
+                contactForm.reset(); // Clear the form
+            } else {
+                confirmationMessage.textContent = 'There was an error. Please try again later.';
+            }
+        };
+
+        xhr.send(formData);
+    });
 });
 
 
