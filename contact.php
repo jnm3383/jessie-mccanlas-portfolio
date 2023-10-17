@@ -25,13 +25,13 @@
                                 <a href="index.html">Home </a>
                             </li>
                             <li>
-                                <a href="about-me.html">About me <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="active">
-                                <a href="projects.html">Projects</a>
+                                <a href="about-me.html">About me</a>
                             </li>
                             <li>
-                                <a href="contact.html">Contact</a>
+                                <a href="projects.html">Projects</a>
+                            </li>
+                            <li class="active">
+                                <a href="contact.html">Contact <span class="sr-only">(current)</span></a>
                             </li>
                         </ul>
                     </div>
@@ -39,56 +39,54 @@
             </div>
         </div>
     </div>
-
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <h1 class="text-centered">Browse my Projects</h1>
+            <div class="col-sm-12 col-lg-6">
+                <h1>Contact me</h1>
+                <p>Quisque pulvinar dignissim tortor sit amet rutrum. Integer rutrum eros ligula, in
+                    eleifend erat rutrum nec. Phasellus convallis erat eros, malesuada condimentum
+                    odio mollis non. Aliquam ullamcorper turpis non arcu feugiat pharetra sit amet nec
+                    neque. Curabitur massa nulla, ultrices ac euismod sit amet, posuere at quam.
+                    Nullam quis vestibulum neque. In quis mauris quis ligula dictum sagittis eget sit
+                    amet neque. 
+                </p>
+                <p>Nunc urna elit, posuere eget nisi at, porttitor pharetra nunc. Nullam non massa sed
+                    augue sagittis sagittis eu in arcu. Integer vulputate quam non hendrerit tincidunt.
+                </p>
             </div>
-            <div class="col-sm-12 col-md-6">
-                <img src="images/project.png" class="project-img">
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <a href="home-depot-cs.html" class="background-link">
-                    <div class="csimage-container">
-                        <img src="images/HD-phone.png" alt="Background Image" class="background-image">
-                        <div class="image-overlay">
-                            <div class="text">Coming soon...</div>
-                        </div>
+            <div class="col-sm-12 col-lg-6">
+                <h2>Send me a message</h2>
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-12">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Jane Doe" />
                     </div>
-                </a>
-                <!-- <h3>Home Depot App AI Integration</h3>
-                <p>Utilizing the capabilities of AI in interior and exterior design within the Home Depot app, Home Depot seized the opportunity to elevate the shopping experience for interior and exterior furniture.</p> -->
-                <a href='home-depot-cs.html' class="btn btn-secondary"> See more</a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <a href="linkedin-cs.html" class="background-link">
-                    <div class="csimage-container">
-                        <img src="images/Linkedin-phone.png" alt="Background Image" class="background-image">
-                        <div class="image-overlay">
-                            <div class="text">LinkedIn App AI Integration</div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-12">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="user@email.com" />
                         </div>
+                </div>
+                <div class="form-group row">
+                    <label for="text" class="col-sm-2 col-form-label">Subject</label>
+                    <div class="col-sm-12">
+                         <input type="text" name="text" id="text" class="form-control" placeholder="Reason to connect" />
                     </div>
-                </a>
-                <!-- <h3>LinkedIn App AI Integration</h3>
-                <p>Designed a mobile app feature harnessing the capabilities of AI to assist LinkedIn users in crafting more efficient message responses.</p> -->
-                <a href='linkedin-cs.html' class="btn btn-secondary"> See more</a>
-            </div>
-            <div class="col-sm-12 col-lg-4">
-                <a href="state-farm-cs.html" class="background-link">
-                    <div class="csimage-container">
-                        <img src="images/statefarm-phone.png" alt="Background Image" class="background-image">
-                        <div class="image-overlay">
-                            <div class="text">State Farm App Feature</div>
-                        </div>
+                </div>
+                <div class="form-group row">
+                    <label for="text" class="col-sm-2 col-form-label">Message</label>
+                    <div class="col-sm-12">
+                        <textarea name="comments" class="form-control" placeholder="Message" maxlength="200"></textarea>
                     </div>
-                </a>
-                <!-- <h3>State Farm App Feature</h3>
-                <p>Implemented an inventive feature within the State Farm Mobile App, with the primary goal of highlighting the extensive range of insurance coverage options offered to their clientele.</p> -->
-                <a href='state-farm-cs.html'class="btn btn-secondary"> See more</a>
-            </div>
+                </div>
+                <input class="btn btn-primary"
+                type="submit" name="submit" id="submit"value="Send Message"/>
+                            
+             </div>
         </div>
     </div>
+       
     <footer>
         <div class="container-fluid company-details">
             <div class="row">
