@@ -1,16 +1,57 @@
+<?php
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$subject = $_POST['subject'];
+$comment = $_POST['comment'];
+
+$message = "Confirmation:\n\n";
+$message .= "Name: $name\n";
+$message .= "Email: $email\n";
+$message .= "Phone: $phone\n";
+$message .= "Subject: $subject \n";
+$message .= "Comment: $comment\n";
+
+$to = "mccanlasj@gmail.com"; 
+$subject = "From Portfolio Inquiry";
+$headers = "From: $email";
+mail($to, $subject, $message, $headers);
+
+$required_fields = array('name', 'email', 'subject', 'comment');
+
+$missing_fields = array();
+
+foreach ($required_fields as $field) {
+    if (empty($_POST[$field])) {
+        $missing_fields[] = $field;
+    }
+}
+
+// Check if there are any missing fields
+if (!empty($missing_fields)) {
+    // Display an error message listing the missing fields
+    echo 'Please fill in the following required fields: ' . implode(', ', $missing_fields);
+} else {
+    // All required fields are present, proceed with form processing
+    // ...
+}
+
+?>
 <!DOCTYPE html>
-<html lang="en">
-<link>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jessie McCanlas - UX Design Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="script.js"></script>
+<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="HTML Template">
+        <meta name="description" content="Jessie McCanlas - 1001753383| HTML Template">
+        <meta name="author" content="Jessie McCanlas">
+
+        <link rel="stylesheet" href="css/style.css">
+	<title>Thank You!</title>
 </head>
-<body>
-    <div class="container">
+
+<div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <nav class="navbar">
@@ -39,44 +80,34 @@
             </div>
         </div>
     </div>
-    <div class="container">
+            <hr>
+<body>
+
+	<div class="container">
         <div class="row">
-            <div class="col-sm-12 col-lg-6">
-                <h1>Contact me</h1>
-                <p>Quisque pulvinar dignissim tortor sit amet rutrum. Integer rutrum eros ligula, in
-                    eleifend erat rutrum nec. Phasellus convallis erat eros, malesuada condimentum
-                    odio mollis non. Aliquam ullamcorper turpis non arcu feugiat pharetra sit amet nec
-                    neque. Curabitur massa nulla, ultrices ac euismod sit amet, posuere at quam.
-                    Nullam quis vestibulum neque. In quis mauris quis ligula dictum sagittis eget sit
-                    amet neque. 
-                </p>
-                <p>Nunc urna elit, posuere eget nisi at, porttitor pharetra nunc. Nullam non massa sed
-                    augue sagittis sagittis eu in arcu. Integer vulputate quam non hendrerit tincidunt.
-                </p>
+            <div class="col-sm-12">
+            <h2>Thank You!</h2>
+
+            <?php 
+                            if ($name && $email && $phone) {
+                                echo "Thank you for reaching out, $name! I appreciate your inquiry and will reach out to you sonn. I have also sent a confirmation email to $email.";
+                            } else {
+                                echo "Thank you for reaching out! I appreciate your inquiry and will reach out to you soon.";
+                            }
+                            ?>
+
+<ul>
+    <li><strong>Name:</strong> <?php echo $_POST['name']; ?></li>
+    <li><strong>Email:</strong> <?php echo $_POST['email']; ?></li>
+    <li><strong>Phone Number:</strong> <?php echo $_POST['phone']; ?></li>
+    <li><strong>Subject:</strong> <?php echo $_POST['subject']; ?></li>
+    <li><strong>Comments:</strong> <?php echo $_POST['comment']; ?></li>
+</ul>
+<a href="index.html" class="btn btn-primary">Home</a>
+
             </div>
-            <div class="col-sm-12 col-lg-6">
-            <h1>Send me a message</h1>
-                   
-
-                    
-                   * Required fields <br><hr>
-                    <form action="contactform.php" method="post">
-                       Name * : <br><input type="text" name="name"><br/><br>
-                       Email * : <br><input type="text" name="email"><br/><br>
-                       Phone Number : <br><input type="text" name="phone"><br/><br>
-                        Subject : <br><input type="text" name="subject"><br/><br>
-                       
-
-                     <br/><br>
-
-                       Comment * : <br/><textarea name="comment" rows="5" cols="40"></textarea><br>
-                       <br>
-                       <input type="Submit" name="SubmitThis" value="Submit">
-                     </form>
-             </div>
         </div>
     </div>
-       
     <footer>
         <div class="container-fluid company-details">
             <div class="row">
@@ -119,3 +150,11 @@
             </div>
         </div>
     </footer>
+        
+        
+
+        <div id="windowSize"></div>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
