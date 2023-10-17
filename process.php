@@ -2,11 +2,11 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
-    $subject = $_POST["subject"];
+    $reason = $_POST["reason"];
     $message = $_POST["message"];
 
-    $to = "mccanlasj@gmail.com";
-    $subject = "Contact Form Submission - " . $subject;
+    $to = "your-email@example.com";
+    $subject = "Contact Form Submission - " . $reason;
     $headers = "From: $email";
 
     mail($to, $subject, $message, $headers);
