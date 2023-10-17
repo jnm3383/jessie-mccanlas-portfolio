@@ -32,3 +32,19 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// contact form
+
+const contactForm = document.getElementById('contact-form');
+const confirmation = document.getElementById('confirmation');
+
+contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    // You can use an AJAX request here to send form data to a server script
+    // For this example, we'll just display a confirmation message.
+    
+    contactForm.style.display = 'none';
+    confirmation.style.display = 'block';
+});
+
+
