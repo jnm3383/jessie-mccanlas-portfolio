@@ -1233,3 +1233,25 @@ body {
     padding: 10px 0;
     display: none;
 }
+
+/* spinning gear */
+box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.spinner {
+    font-size: 3rem;
+    width: 5rem;
+    height: 5rem;
+    animation: spin 2s linear infinite;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

@@ -151,8 +151,6 @@ if (!empty($missing_fields)) {
         </div>
     </footer>
         
-        
-
         <div id="windowSize"></div>
 
         <script src="js/app.js"></script>
