@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 //    })
 });
 
-/* 
-   * Ensure that the DOM is loaded before running
-   * the functions inside
-*/
-document.addEventListener('DOMContentLoaded', () => {
-   reportWindowSize();
-   window.onresize = reportWindowSize;
-});
+// /* 
+//    * Ensure that the DOM is loaded before running
+//    * the functions inside
+// */
+// document.addEventListener('DOMContentLoaded', () => {
+//    reportWindowSize();
+//    window.onresize = reportWindowSize;
+// });
 // Scroll to top arrow
 document.addEventListener('DOMContentLoaded', function () {
     const scrollToTop = document.getElementById('scrollToTop');
