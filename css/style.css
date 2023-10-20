@@ -1169,17 +1169,24 @@ body {
 /* Grow effect */
 .grow-container {
     cursor: pointer;
-    transition: transform 0.3s ease; /* Add a transition for a smooth effect */
+    transition: transform 0.3s ease; 
 }
 
 .grow-container:hover {
-    transform: scale(1.2); /* Increase the size of the div on hover */
+    transform: scale(1.7); 
 }
 
-.grow-container i {
-    font-size: 2.5rem;
+.grow {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: var(--secondary);
+}
+
+.grow {
+    font-size: 2.5rem;
 }
 
 /* Bounce Hover */
